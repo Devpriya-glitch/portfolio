@@ -76,7 +76,7 @@
     }
 
     .hero__inner {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 56px;
         text-align: left;
     }
