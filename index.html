@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanka — Web Developer &amp; Web Designer</title>
+  <meta name="description"
+    content="Bhanu — Frontend Developer &amp; Web Designer building modern, responsive, high-performance websites.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('has-js');</script>
+
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/responsive.css">
+</head>
+
+<body>
+
+  <!-- background layers -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+    <div class="bg__glow bg__glow--3"></div>
+    <div class="bg__noise"></div>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Priyanka - Home">
+      <svg viewBox="0 0 220 64" width="151" height="44" xmlns="http://www.w3.org/2000/svg" role="img"
+        aria-label="Priyanka Logo" style="display:block;overflow:visible">
+        <defs>
+          <linearGradient id="pk-logo-grad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#5B8CFF" />
+            <stop offset="1" stop-color="#8B5CF6" />
+          </linearGradient>
+        </defs>
+
+        <rect x="4" y="8" width="48" height="48" rx="15" fill="url(#pk-logo-grad)" />
+        <path d="M22.5 47V20.5h9.5a8.5 8.5 0 0 1 0 17H22.5" transform="translate(4 3)" fill="none" stroke="#fff"
+          stroke-opacity="0.35" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M22.5 47V20.5h9.5a8.5 8.5 0 0 1 0 17H22.5" fill="none" stroke="#fff" stroke-width="7"
+          stroke-linecap="round" stroke-linejoin="round" />
+
+        <text x="62" y="36" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600"
+          letter-spacing="0.3" fill="currentColor">Priyanka</text>
+        <rect x="62" y="41" width="28" height="2.5" rx="1.25" fill="url(#pk-logo-grad)" />
+        <text x="63" y="52" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="9" font-weight="500"
+          letter-spacing="2.2" fill="currentColor" opacity="0.65">WEB DEVELOPER</text>
+      </svg>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#top" class="nav__link is-active">Home</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#skills" class="nav__link">Skills</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#services" class="nav__link">Services</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav__cta">Let's Talk <span class="arrow">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__text" data-reveal>
+          <span class="badge"> •ㅤㅤWEB DEVELOPERㅤㅤ• </span>
+          <h1 class="hero__title">
+            I Build Digital Experiences That
+            <span class="grad-text">Look Beautiful &amp; Perform.</span>
+          </h1>
+          <p class="hero__desc">
+            I'm Priyanka, a passionate Web Developer specializing in building
+            modern, responsive, and user-friendly websites with clean code
+            and seamless user experiences.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary magnetic">View Projects <span class="arrow"> <svg
+                  viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></span></a>
+            <a href="#contact" class="btn btn--ghost magnetic">Let's Work Together</a>
+          </div>
+
+          <div class="hero__socials">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="19" height="19">
+                <path fill="currentColor"
+                  d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.4-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.4 4.4 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.4 4.4 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.8 5.7-5.4 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/priyakashyap3402/" target="_blank" rel="noopener"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="19" height="19">
+                <path fill="currentColor"
+                  d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.5V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.6 0 4.2 2.4 4.2 5.4v6.2ZM5.3 7.4a2 2 0 1 1 0-4 2 2 0 0 1 0 4ZM7 20.4H3.6V9H7v11.4Z" />
+              </svg>
+            </a>
+            <a href="mailto:priyakashyap80515@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="19" height="19">
+                <path fill="currentColor"
+                  d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 6.2 7.8-6.2H4.2Zm15.8 1.6-7.4 5.9a1 1 0 0 1-1.2 0L4 7.6v10.9h16V7.6Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <div class="dev-card">
+            <div class="dev-card__head">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+              <span class="dev-card__tag">&lt; Web Developer /&gt;</span>
+            </div>
+            <p class="dev-card__role">Web Developer</p>
+            <div class="dev-bar">
+              <div class="dev-bar__row"><span>HTML</span><i style="--w:96%"></i></div>
+              <div class="dev-bar__row"><span>CSS</span><i style="--w:94%"></i></div>
+              <div class="dev-bar__row"><span>JavaScript</span><i style="--w:80%"></i></div>
+            </div>
+            <p class="dev-card__foot">Web Development • Responsive Design • Clean Code</p>
+          </div>
+
+          <span class="float-badge fb-1">HTML5</span>
+          <span class="float-badge fb-2">CSS3</span>
+          <span class="float-badge fb-3">JavaScript</span>
+          <span class="float-badge fb-4">Bootstrap</span>
+          <span class="float-badge fb-5">WordPress</span>
+          <span class="float-badge fb-6">Elementor</span>
+          <span class="float-badge fb-7">WPBakery</span>
+          <span class="float-badge fb-8">Divi</span>
+          <span class="float-badge fb-9">PHP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <h2 class="section-heading" data-reveal>Turning Ideas Into Interfaces.</h2>
+          <div class="about__right" data-reveal>
+            <p class="about__text">
+              I'm Priyanka, a passionate Web Developer focused on building modern,
+              responsive, and user-friendly websites. I specialize in HTML5, CSS3,
+              JavaScript, Bootstrap, WordPress, Elementor, WPBakery, Divi, and PHP.
+              I enjoy creating clean layouts, developing responsive designs, and
+              turning creative ideas into functional websites. My focus is on
+              writing clean code, improving website performance, and delivering
+              seamless user experiences across different devices and browsers.
+            </p>
+
+            <div class="what-do-side" data-revea>
+              <h2>What I Do</h2>
+              <p>Web Development · WordPress Development · Responsive Design · Frontend Development</p>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat__num" data-count="25">0</span><span class="stat__plus">+</span>
+                <span class="stat__label">Projects</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="150">0</span><span class="stat__plus">+</span>
+                <span class="stat__label">Pages</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="1.7">0</span><span class="stat__plus">+</span>
+                <span class="stat__label">Years Experience</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="100">0</span><span class="stat__plus">%</span>
+                <span class="stat__label">Responsive</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="head-block" data-reveal>
+          <span class="eyebrow">Capabilities</span>
+          <h2 class="section-heading">Skills &amp; Tools</h2>
+        </div>
+
+
+        <div class="bento" data-reveal>
+
+          <div class="bento__card">
+            <span class="bento__icon ">
+              <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" aria-label="HTML5 Logo">
+                <path fill="currentColor"
+                  d="M0 32l35 403.5L192 480l157-44.5L384 32H0zm308.8 129.8H75.2l5.2 58.5h223.2l-6.5 72.6-105.1 29.1-.1.1h-.2l-105-29.2-6.7-75.1h58.3l3.4 37.9 50 13.5 50.1-13.5 5.2-58.5H75.2L69.8 90.5h244.4l-5.4 71.3z" />
+              </svg>
+            </span>
+            <h3>HTML5</h3>
+            <p>Semantic, accessible, and well-structured markup for modern, SEO-friendly websites and web applications.
+            </p>
+          </div>
+
+          <div class="bento__card ">
+            <span class="bento__icon">
+              <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#1572B6" d="M0 32l35 403.5L192 480l157-44.5L384 32H0z" />
+                <path fill="#33A9DC" d="M192 435.5l127-36 30-335.5H192v371.5z" />
+                <path fill="#fff"
+                  d="M75 137h234l-5 56H132l5 58h162l-7 78-100 28-100-28-7-78h57l3 34 47 13 47-13 3-27H84L75 137z" />
+              </svg>
+            </span>
+            <h3>CSS3</h3>
+            <p>Responsive layouts, custom animations, Flexbox, Grid, transitions, and modern UI styling across all
+              screen sizes.</p>
+          </div>
+
+          <div class="bento__card bento__card--lg">
+            <span class="bento__icon"><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                  d="M0 32v448h448V32H0zm240.1 349.3c0 43.5-25.5 63.4-62.6 63.4-16.8 0-30.9-4.4-40.6-10.5l6.8-25.9c8.2 4.4 18.7 8.4 31.4 8.4 13.6 0 22-6.5 22-21.6V272h43v109.3zm90.4 63.4c-20.1 0-39.3-6.8-49.7-13.6l7.6-27.4c10.7 6.8 26.3 12.1 42.8 12.1 17.7 0 27.1-7.6 27.1-19.1 0-10.5-8.1-17.1-28.5-24.1-28.2-9.7-46.4-25.2-46.4-49.6 0-28.5 23.8-50.2 63.1-50.2 18.9 0 32.9 4.7 42.8 9.4l-8.4 26.5c-6.6-3.4-18.7-8.9-35.1-8.9-16.7 0-24.8 7.8-24.8 17.4 0 11.6 9.5 16.3 31.5 24.1 30 10.9 43.9 26.5 43.9 50.4 0 28.1-21.4 52.1-67.9 52.1z" />
+              </svg></span>
+            <h3>JavaScript</h3>
+            <p>Interactive user experiences using modern JavaScript, DOM manipulation, events, API integration, and
+              dynamic front-end functionality.</p>
+          </div>
+
+          <div class="bento__card">
+            <span class="bento__icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="6" width="88" height="88" rx="20" fill="#7952B3" />
+                <path fill="#fff" fill-rule="evenodd"
+                  d="M33 24h20c12 0 19 6 19 15 0 6-3 10-8 13 7 2 11 7 11 14 0 10-8 17-21 17H33V24zm12 10v13h7c5 0 8-2 8-6.500S57 34 52 34h-7zm0 22v16h9c6 0 9-3 9-8s-3-8-9-8h-9z" />
+              </svg></span>
+            <h3>Bootstrap</h3>
+            <p>Mobile-first responsive websites using Bootstrap's grid system, reusable components, and utility classes.
+            </p>
+          </div>
+
+          <div class="bento__card bento__card--lg">
+            <span class="bento__icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="46" fill="#21759B" />
+                <circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="3.500" />
+                <path d="M24 34l13 36 13-31 13 31 13-36" fill="none" stroke="#fff" stroke-width="8"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg></span>
+            <h3>WordPress</h3>
+            <p>Custom WordPress websites with flexible themes, plugin integration, and easy-to-manage content for
+              businesses and brands.</p>
+          </div>
+
+          <div class="bento__card">
+            <span class="bento__icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="46" fill="#92003B" />
+                <rect x="32" y="28" width="9" height="44" fill="#fff" />
+                <rect x="48" y="28" width="20" height="9" fill="#fff" />
+                <rect x="48" y="45.500" width="20" height="9" fill="#fff" />
+                <rect x="48" y="63" width="20" height="9" fill="#fff" />
+              </svg></span>
+            <h3>Elementor</h3>
+            <p>Custom WordPress websites and landing pages with responsive layouts, reusable sections, animations, and
+              polished UI designs.</p>
+          </div>
+
+          <div class="bento__card">
+            <span class="bento__icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20 12h60a10 10 0 0 1 10 10v42a10 10 0 0 1-10 10H58L38 92V74H20a10 10 0 0 1-10-10V22a10 10 0 0 1 10-10z"
+                  fill="#0DB9F0" />
+                <path d="M24 30l11 26 15-22 15 22 11-26" fill="none" stroke="#fff" stroke-width="7"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg></span>
+            <h3>WPBakery</h3>
+            <p>Drag-and-drop page building in WordPress with custom rows, columns, and styled elements for flexible page
+              layouts.</p>
+          </div>
+
+          <div class="bento__card">
+            <span class="bento__icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="46" fill="#7E3BD0" />
+                <path fill="#fff" fill-rule="evenodd"
+                  d="M33 26h14c15 0 25 10 25 24S62 74 47 74H33V26zm11 11v26h3c9 0 14-5 14-13s-5-13-14-13h-3z" />
+              </svg></span>
+            <h3>Divi</h3>
+            <p>Visual page building with the Divi theme and builder to create modern, fully customized, and responsive
+              layouts.</p>
+          </div>
+
+          <div class="bento__card">
+            <span class="bento__icon"><svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="50" cy="30" rx="47" ry="26" fill="#777BB4" />
+                <text x="50" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-size="26"
+                  font-weight="bold" fill="#fff">php</text>
+              </svg></span>
+            <h3>PHP</h3>
+            <p>Dynamic website functionality, WordPress customization, form handling, and server-side logic for flexible
+              web projects.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="head-block" data-reveal>
+          <span class="eyebrow">Portfolio</span>
+          <h2 class="section-heading">Selected Work</h2>
+          <p class="head-block__sub">
+            A collection of websites, landing pages and digital experiences — shown here as
+            sample case-study layouts, ready to swap in real project screenshots and details.
+          </p>
+        </div>
+
+        <div class="filters" data-reveal>
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="html-site">HTML</button>
+          <button class="filter" data-filter="elementor">Elementor</button>
+          <button class="filter" data-filter="DIVI">DIVI</button>
+          <button class="filter" data-filter="WP">WPBakery</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+
+          <!-- html  -->
+          <a href="https://www.sobanewjersey.com/" class="p-card" data-cat="html-site" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--insurance"></div>
+              <div class="p-card__overlay"><span>View Project<span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>Soba New Jersey</h4>
+              <p> Developed responsive websites for rehabilitation and addiction recovery centers using HTML5, CSS3, and
+                JavaScript. Focused on clean design, smooth navigation, and user-friendly layouts.</p>
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+                <span>BOOTSTRAP</span>
+              </div>
+            </div>
+          </a>
+
+
+          <!-- elementor  -->
+          <a href="https://carepointboston.com/" class="p-card" data-cat="elementor" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>Care Point</h4>
+              <p>Developed responsive WordPress websites using Elementor for rehabilitation and addiction recovery
+                centers, focusing on custom layouts, service pages, and user-friendly navigation.</p>
+              <div class="tags"><span>WordPress</span><span>Elementor</span></div>
+            </div>
+          </a>
+
+          <a href="https://www.allinsolutions.com/" class="p-card" data-cat="elementor" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>All In Solutions</h4>
+              <p>Developed responsive WordPress websites using Elementor for rehabilitation and addiction recovery
+                centers, focusing on custom layouts, service pages, and user-friendly navigation.</p>
+              <div class="tags"><span>WordPress</span><span>Elementor</span></div>
+            </div>
+          </a>
+
+          <a href="https://www.thefreedomcenter.com/" class="p-card" data-cat="elementor" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>The Freedom Center</h4>
+              <p>Developed responsive WordPress websites using Elementor for rehabilitation and addiction recovery
+                centers, focusing on custom layouts, service pages, and user-friendly navigation.</p>
+              <div class="tags"><span>WordPress</span><span>Elementor</span></div>
+            </div>
+          </a>
+
+          <a href="https://able2changerecovery.com/" class="p-card" data-cat="elementor" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>Able To Change Recovery</h4>
+              <p>Developed responsive WordPress websites using Elementor for rehabilitation and addiction recovery
+                centers, focusing on custom layouts, service pages, and user-friendly navigation.</p>
+              <div class="tags"><span>WordPress</span><span>Elementor</span></div>
+            </div>
+          </a>
+
+          <a href="https://ingeniusprep.com/" class="p-card" data-cat="elementor" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>InGenius Prep</h4>
+              <p>Developed responsive WordPress websites using Elementor for eductional consulting orgnaization
+                specializing in collage addmissions and student guidance and addiction recovery
+                centers, focusing on custom layouts, service pages, and user-friendly navigation.</p>
+              <div class="tags"><span>WordPress</span><span>Elementor</span></div>
+            </div>
+          </a>
+
+          <a href="https://www.marylandaddictionrecovery.com/" class="p-card" data-cat="elementor" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>MARC</h4>
+              <p>Developed responsive WordPress websites using Elementor for rehabilitation and addiction recovery
+                centers, focusing on custom layouts, service pages, and user-friendly navigation.</p>
+              <div class="tags"><span>WordPress</span><span>Elementor</span></div>
+            </div>
+          </a>
+
+
+          <!-- WPbkrey  pages  -->
+
+          <a href="https://agapedetoxcenter.com/" class="p-card" data-cat="WP" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>Agape Detox Center</h4>
+              <p>Customized an existing WordPress website for Agape Detox Center, focusing on design improvements and
+                client-specific requirements. Modified website layouts, sections, and frontend elements to enhance its
+                visual appearance, responsiveness, and overall user experience.</p>
+              <div class="tags"><span>WordPress</span><span>WPBakery</span></div>
+            </div>
+          </a>
+
+          <a href="https://www.newwatersrecovery.com/" class="p-card" data-cat="WP" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>New Waters Recovery</h4>
+              <p>Website for an industrial construction company specializing in refractory, insulation, and fireproofing
+                works — built in WordPress with Elementor, featuring service pages and client showcase.</p>
+              <div class="tags"><span>WordPress</span><span>WPBakery</span></div>
+            </div>
+          </a>
+
+          <a href="https://www.ikonrecoverycenters.org/" class="p-card" data-cat="WP" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>IKON Recovery Centers</h4>
+              <p>Developed and customized responsive WordPress websites using WPBakery for rehabilitation and addiction
+                treatment centers. Focused on service pages, clean layouts, and smooth user navigation.</p>
+              <div class="tags"><span>WordPress</span><span>WPBakery</span></div>
+            </div>
+          </a>
+
+          <a href="https://thegardenrecovery.com/" class="p-card" data-cat="WP" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>The Garden Recovery</h4>
+              <p>Developed and customized responsive WordPress websites using WPBakery for rehabilitation and addiction
+                treatment centers. Focused on service pages, clean layouts, and smooth user navigation.</p>
+              <div class="tags"><span>WordPress</span><span>WPBakery</span></div>
+            </div>
+          </a>
+
+          <a href="https://emberstreatmentcenter.com/" class="p-card" data-cat="WP" target="_blank">
+            <div class="p-card__media">
+              <div class="ph-shot ph-shot--pest"></div>
+              <div class="p-card__overlay"><span>View Project <span class="arrow"><svg viewBox="0 0 24 24" width="20"
+                      height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span></span></div>
+            </div>
+            <div class="p-card__info">
+              <h4>Embers Recovery</h4>
+              <p>Developed and customized responsive WordPress websites using WPBakery for rehabilitation and addiction
+                treatment centers. Focused on service pages, clean layouts, and smooth user navigation.</p>
+              <div class="tags"><span>WordPress</span><span>WPBakery</span></div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="head-block" data-reveal>
+          <span class="eyebrow">What I Do</span>
+          <h2 class="section-heading">Services</h2>
+        </div>
+        <div class="service-grid" data-reveal>
+          <div class="service-card">
+            <span class="service-card__icon">◇</span>
+            <h3>Frontend Development</h3>
+            <p>Modern, responsive and high-performance websites using HTML5, CSS3, JavaScript and Bootstrap.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__icon">◇</span>
+            <h3>WordPress Development</h3>
+            <p>Custom WordPress websites with flexible themes, plugin integration and easy content management.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__icon">◇</span>
+            <h3>Elementor Websites</h3>
+            <p>Custom Elementor pages and landing pages with reusable sections and smooth animations.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__icon">◇</span>
+            <h3>WPBakery &amp; Divi Customization</h3>
+            <p>Visual page building and customization of existing WPBakery and Divi websites.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__icon">◇</span>
+            <h3>PHP &amp; WordPress Customization</h3>
+            <p>Custom functionality, form handling and server-side logic for flexible WordPress projects.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__icon">◇</span>
+            <h3>Interactive UI &amp; Animations</h3>
+            <p>Engaging user experiences with JavaScript, sliders, transitions and dynamic front-end features.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__icon">◇</span>
+            <h3>Responsive Design</h3>
+            <p>Pixel-perfect experiences across desktop, tablet and mobile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="head-block" data-reveal>
+          <span class="eyebrow">How I Work</span>
+          <h2 class="section-heading">Work Process</h2>
+        </div>
+        <div class="process__list">
+          <div class="process__step" data-reveal>
+            <span class="process__num">01</span>
+            <div>
+              <h3>Discover</h3>
+              <p>Understand the project goals, target audience and requirements, and choose the right platform
+                (WordPress, Elementor, Divi, WPBakery or custom code).</p>
+            </div>
+          </div>
+          <div class="process__step" data-reveal>
+            <span class="process__num">02</span>
+            <div>
+              <h3>Design</h3>
+              <p>Turn the design concept into a clean, conversion-focused interface with a clear layout, typography and
+                visual direction.</p>
+            </div>
+          </div>
+          <div class="process__step" data-reveal>
+            <span class="process__num">03</span>
+            <div>
+              <h3>Develop</h3>
+              <p>Build responsive, interactive pages using HTML5, CSS3, JavaScript, Bootstrap, PHP and page builders
+                like Elementor, WPBakery and Divi.</p>
+            </div>
+          </div>
+          <div class="process__step" data-reveal>
+            <span class="process__num">04</span>
+            <div>
+              <h3>Test</h3>
+              <p>Check responsiveness across desktop, tablet and mobile, test cross-browser compatibility, forms and
+                page speed.</p>
+            </div>
+          </div>
+          <div class="process__step" data-reveal>
+            <span class="process__num">05</span>
+            <div>
+              <h3>Launch</h3>
+              <p>Deliver the final production-ready website with clean code, easy content management and post-launch
+                support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="contact__glow"></div>
+      <div class="container">
+        <div class="contact__inner" data-reveal>
+          <h2 class="section-heading contact__title">Let's Build Something<br>Great Together.</h2>
+          <p class="contact__sub">Have an idea, website or project in mind? Let's turn it into a modern digital
+            experience.</p>
+
+          <form class="contact__form" id="contactForm">
+            <div class="field">
+              <input type="text" id="cName" name="name" required placeholder=" ">
+              <label for="cName">Name</label>
+            </div>
+            <div class="field">
+              <input type="email" id="cEmail" name="email" required placeholder=" ">
+              <label for="cEmail">Email</label>
+            </div>
+            <div class="field">
+              <input type="text" id="cType" name="type" placeholder=" ">
+              <label for="cType">Project Type</label>
+            </div>
+            <div class="field field--full">
+              <textarea id="cMessage" name="message" rows="4" required placeholder=" "></textarea>
+              <label for="cMessage">Message</label>
+            </div>
+            <button type="submit" class="btn btn--primary magnetic field--full">
+              Send Message <span class="arrow">→</span>
+            </button>
+            <p class="form-note" id="formNote" role="status"></p>
+          </form>
+
+          <div class="contact__links">
+            <a href="mailto:priyakashyap80515@gmail.com">priyakashyap80515@gmail.com</a>
+            <span>+91 - 78073 38602</span>
+            <span>Mohali, Punjab</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="footer__bg" aria-hidden="true">
+      <div class="footer__grid"></div>
+      <div class="footer__corner footer__corner--left"></div>
+      <div class="footer__corner footer__corner--right"></div>
+    </div>
+
+    <div class="container">
+      <!-- CTA -->
+      <div class="footer-cta" data-reveal>
+        <div class="footer-cta__glow" aria-hidden="true"></div>
+        <h2 class="footer-cta__title">Let's Build Something<br>Great Together.</h2>
+        <p class="footer-cta__text">Have a project in mind? Let's build a modern, responsive and high-performing website
+          with HTML, CSS, JavaScript, WordPress and Elementor.</p>
+        <a href="#contact" class="btn btn--primary magnetic">Let's Talk <span class="arrow">→</span></a>
+      </div>
+
+      <!-- MAIN -->
+      <div class="footer-main">
+        <div class="footer-col footer-col--brand" data-reveal>
+          <a href="#top" class="nav__logo" aria-label="Priyanka Kashyap - Home">
+            <svg viewBox="0 0 220 64" width="151" height="44" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="Priyanka Logo" style="display:block;overflow:visible">
+              <defs>
+                <linearGradient id="pk-foot-grad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#5B8CFF" />
+                  <stop offset="1" stop-color="#8B5CF6" />
+                </linearGradient>
+              </defs>
+
+              <rect x="4" y="8" width="48" height="48" rx="15" fill="url(#pk-foot-grad)" />
+              <path d="M22.5 47V20.5h9.5a8.5 8.5 0 0 1 0 17H22.5" transform="translate(4 3)" fill="none" stroke="#fff"
+                stroke-opacity="0.35" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M22.5 47V20.5h9.5a8.5 8.5 0 0 1 0 17H22.5" fill="none" stroke="#fff" stroke-width="7"
+                stroke-linecap="round" stroke-linejoin="round" />
+
+              <text x="62" y="36" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600"
+                letter-spacing="0.3" fill="currentColor">Priyanka</text>
+              <rect x="62" y="41" width="28" height="2.5" rx="1.25" fill="url(#pk-foot-grad)" />
+              <text x="63" y="52" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="9" font-weight="500"
+                letter-spacing="2.2" fill="currentColor" opacity="0.65">WEB DEVELOPER</text>
+            </svg>
+          </a>
+          <p class="footer-col__desc">
+            Web Developer creating modern, responsive and
+            engaging digital experiences with HTML, CSS, JavaScript, WordPress and Elementor.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor"
+                  d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.4-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.4 4.4 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.4 4.4 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.8 5.7-5.4 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor"
+                  d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.5V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.6 0 4.2 2.4 4.2 5.4v6.2ZM5.3 7.4a2 2 0 1 1 0-4 2 2 0 0 1 0 4ZM7 20.4H3.6V9H7v11.4Z" />
+              </svg>
+            </a>
+            <a href="mailto:priyakashyap80515@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor"
+                  d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 6.2 7.8-6.2H4.2Zm15.8 1.6-7.4 5.9a1 1 0 0 1-1.2 0L4 7.6v10.9h16V7.6Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-col" data-reveal aria-label="Footer navigation">
+          <h3 class="footer-col__heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="#top"><span>Home</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#about"><span>About</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#skills"><span>Skills</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#projects"><span>Projects</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#services"><span>Services</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#contact"><span>Contact</span><span class="fl-arrow">→</span></a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col" data-reveal>
+          <h3 class="footer-col__heading">What I Do</h3>
+          <ul class="footer-links">
+            <li><a href="#services"><span>Frontend Development</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#services"><span>Web Design</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#services"><span>Responsive Design</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#services"><span>WordPress</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#services"><span>Elementor</span><span class="fl-arrow">→</span></a></li>
+            <li><a href="#services"><span>Landing Pages</span><span class="fl-arrow">→</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal>
+          <h3 class="footer-col__heading">Let's Connect</h3>
+          <a href="mailto:bhanushanker96@gmail.com" class="footer-email">Let's work together</a>
+          <p class="footer-col__desc">Available for freelance &amp; professional opportunities.</p>
+          <span class="status-pill"><span class="status-dot"></span>Available for Work</span>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Priyanka. All Rights Reserved.</span>
+        <span class="footer-bottom__mid">•ㅤㅤWEB DEVELOPERㅤㅤ• </span>
+        <button class="footer-bottom__top" id="toTop">Back to Top <span class="arrow">↑</span></button>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTopFloat" aria-label="Back to top">↑</button>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Your JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>

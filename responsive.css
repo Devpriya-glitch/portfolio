@@ -1,0 +1,150 @@
+@media (min-width: 1599px) {
+    .container {
+        max-width: 1464px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .bento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento__card--lg {
+        grid-column: span 2;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .featured__media {
+        min-height: 260px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 860px) {
+    .nav__toggle {
+        display: flex;
+    }
+
+    .nav__cta {
+        display: none;
+    }
+
+    .nav__links {
+        position: fixed;
+        top: 78px;
+        left: 16px;
+        right: 16px;
+        background: rgba(12, 17, 24, 0.95);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 14px 20px 20px;
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+
+    .nav__links.is-open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav__link {
+        padding: 12px 0;
+        width: 100%;
+    }
+
+    .hero__inner {
+        flex-direction: column;
+        gap: 56px;
+        text-align: left;
+    }
+
+    .hero {
+        padding-top: 130px;
+    }
+
+    .hero__visual {
+        order: -1;
+        min-height: 320px;
+    }
+
+    .float-badge {
+        display: none;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento {
+        grid-template-columns: 1fr;
+    }
+
+    .bento__card--lg {
+        grid-column: span 1;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process__step {
+        gap: 20px;
+    }
+
+    .contact__form {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-cta {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 861px) and (max-width: 1080px) {
+    .footer-main {
+        grid-template-columns: 1.2fr 1fr 1fr;
+    }
+
+    .footer-col--brand {
+        grid-column: 1 / -1;
+    }
+}
